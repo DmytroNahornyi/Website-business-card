@@ -1,0 +1,63 @@
+/* Для планшетов */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header #branding,
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+}
+
+/* Для мобильных телефонов */
+@media (max-width: 500px) {
+    header {
+        padding-top: 20px;
+    }
+
+    header nav li {
+        display: block;
+        padding: 5px;
+    }
+
+    #showcase h1 {
+        font-size: 25px;
+    }
+}
+
+/* Для устройств Apple с Retina дисплеем */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+
+    /* Здесь можно добавить стили для изображений высокого разрешения */
+    .logo {
+        background-image: url('../images/logo@2x.png');
+        background-size: contain;
+    }
+}
+
+/* Для iPad в портретной и ландшафтной ориентации */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* Стили для iPad */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Для iPhone X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+    /* Стили для iPhone X */
+    body {
+        font-size: 14px;
+    }
+}
