@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/DmytroNahornyi/Website-business-card",
+"homepage": "https://DmytroNahornyi.github.io/Website-business-card",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -7,5 +7,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
