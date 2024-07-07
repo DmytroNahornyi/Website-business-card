@@ -1,4 +1,13 @@
 /* Загальні стилі */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
@@ -9,15 +18,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    scroll-padding-top: 80px;
 }
 
 .content {
     flex: 1;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 /* Стиль для полосы прокрутки */
@@ -39,22 +45,8 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
 
-/* Фоновое изображение */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('../images/Logo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Полупрозрачный белый оверлей */
+/* Фоновое изображение и оверлей */
+body::before,
 body::after {
     content: "";
     position: fixed;
@@ -63,6 +55,16 @@ body::after {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+body::before {
+    background-image: url('../images/Logo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body::after {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -90,6 +92,7 @@ body::after {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -169,21 +172,24 @@ body::after {
 /* Стилі для main */
 main {
     padding: 80px 0 20px;
+    width: 100%;
 }
 
 section {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
-    padding: 30px;
+    padding: 80px 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
     box-sizing: border-box;
     scroll-snap-align: start;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 h1,
@@ -196,6 +202,7 @@ form {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 form input,
@@ -206,7 +213,6 @@ form textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 form button {
@@ -254,7 +260,53 @@ footer {
     width: 100%;
 }
 
+/* Стили для каждой секции */
+#home {
+    background-color: #e0f7fa;
+}
+
+#services {
+    background-color: #b2ebf2;
+}
+
+#about {
+    background-color: #80deea;
+}
+
+#contact {
+    background-color: #4dd0e1;
+}
+
+/* Дополнительные стили для улучшения отзывчивости */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Адаптивність */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-content {
+        justify-content: center;
+    }
+
+    .header-content nav {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header-content nav ul {
+        justify-content: center;
+    }
+
+    .language-select-container {
+        margin-top: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -263,6 +315,7 @@ footer {
     .header-content nav {
         margin-top: 20px;
         margin-left: 0;
+        width: 100%;
     }
 
     .header-content nav ul {
@@ -283,7 +336,8 @@ footer {
 
 @media (max-width: 480px) {
     .container {
-        width: 95%;
+        width: 100%;
+        padding: 0 10px;
     }
 
     h1 {
@@ -293,35 +347,8 @@ footer {
     h2 {
         font-size: 20px;
     }
-}
 
-/* Дополнительные стили */
-html,
-body {
-    scroll-behavior: auto !important;
-}
-
-body {
-    scroll-padding-top: 80px;
-}
-
-main {
-    padding-top: 80px;
-}
-
-/* Стили для каждой секции */
-#home {
-    background-color: #e0f7fa;
-}
-
-#services {
-    background-color: #b2ebf2;
-}
-
-#about {
-    background-color: #80deea;
-}
-
-#contact {
-    background-color: #4dd0e1;
+    .header-content nav ul li {
+        margin: 5px 0;
+    }
 }
