@@ -1,0 +1,108 @@
+/* Стили для main */
+main {
+    padding: 80px 0 20px;
+    width: 100%;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    color: #0779e4;
+}
+
+/* Стили для form */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #0779e4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error-message {
+    color: #a5213f;
+    font-size: 18px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+/* Стили для каждой секции */
+#home {
+    background-color: #e0f7fa;
+}
+
+#services {
+    background-color: #b2ebf2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#about {
+    background-color: #80deea;
+}
+
+#contact {
+    background-color: #4dd0e1;
+}
+
+.services-content {
+    width: 100%;
+    max-width: 800px;
+    /* или другое подходящее значение */
+    margin: 0 auto;
+}

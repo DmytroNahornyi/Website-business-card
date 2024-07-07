@@ -1,0 +1,9 @@
+/* Стили для footer */
+footer {
+    background: #22b0b0;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
