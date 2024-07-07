@@ -58,7 +58,7 @@ body::after {
 }
 
 body::before {
-    background-image: url('../images/Logo.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
