@@ -267,6 +267,9 @@ footer {
 
 #services {
     background-color: #b2ebf2;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #about {
@@ -275,6 +278,23 @@ footer {
 
 #contact {
     background-color: #4dd0e1;
+}
+
+/* Стили для виджета погоды и контента в секции services */
+.weather-widget-container {
+    flex: 0 0 auto;
+    width: 30%;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.weather-widget {
+    width: 100%;
+    height: 100%;
+}
+
+.services-content {
+    flex: 1;
 }
 
 /* Дополнительные стили для улучшения отзывчивости */
@@ -331,6 +351,17 @@ img {
         margin-left: 0;
         margin-top: 10px;
         align-self: center;
+    }
+
+    #services {
+        flex-direction: column;
+    }
+
+    .weather-widget-container {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
