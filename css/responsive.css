@@ -39,7 +39,7 @@ only screen and (min-resolution: 192dpi) {
 
     /* Здесь можно добавить стили для изображений высокого разрешения */
     .logo {
-        background-image: url('../images/Logo.jpg');
+        background-image: url('/images/Logo.jpg');
         background-size: contain;
     }
 }
