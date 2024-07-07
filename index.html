@@ -11,6 +11,8 @@
     />
   </head>
   <body>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
     <header class="header">
       <div class="container">
         <div class="header-content">
@@ -32,6 +34,17 @@
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <ul>
+          <li><a href="#home" data-translate="home">Головна</a></li>
+          <li><a href="#services" data-translate="services">Послуги</a></li>
+          <li><a href="#about" data-translate="about">Про нас</a></li>
+          <li><a href="#contact" data-translate="contact">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <main>
       <div class="container">
@@ -129,5 +142,29 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', function() {
+          if (mobileMenu.style.display === 'flex') {
+            mobileMenu.style.display = 'none';
+            menuToggle.textContent = '☰';
+          } else {
+            mobileMenu.style.display = 'flex';
+            menuToggle.textContent = '✕';
+          }
+        });
+
+        mobileMenuLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            mobileMenu.style.display = 'none';
+            menuToggle.textContent = '☰';
+          });
+        });
+      });
+    </script>
   </body>
 </html>
