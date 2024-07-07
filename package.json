@@ -1,5 +1,5 @@
 {
-"homepage": "https://DmytroNahornyi.github.io/Website-business-card",
+  "homepage": "https://DmytroNahornyi.github.io/Website-business-card",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
