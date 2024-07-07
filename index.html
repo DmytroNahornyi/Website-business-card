@@ -1,101 +1,85 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оцифрування відеокасет</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Оцифрування відеокасет</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <header class="header">
-      <div class="container">
-        <img src="images/Logo.jpg" alt="Логотип" class="logo" />
-        <nav>
-          <ul>
-            <li><a href="#home">Головна</a></li>
-            <li><a href="#services">Послуги</a></li>
-            <li><a href="#about">Про нас</a></li>
-            <li><a href="#contact">Контакти</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container">
+            <div class="header-content">
+                <img src="images/Logo.jpg" alt="Логотип" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#home" data-translate="home">Головна</a></li>
+                        <li><a href="#services" data-translate="services">Послуги</a></li>
+                        <li><a href="#about" data-translate="about">Про нас</a></li>
+                        <li><a href="#contact" data-translate="contact">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="language-select-container">
+                    <select id="languageSelect" class="language-select">
+                        <option value="uk">UA</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-      <div class="container">
-        <section id="home">
-          <h1>Оцифрування відео</h1>
-          <p>Збережіть ваші спогади у цифровому форматі</p>
-          <p>
-            Ласкаво просимо до нашого сервісу оцифрування відео. Ми допоможемо
-            вам зберегти ваші дорогоцінні моменти у високій якості для майбутніх
-            поколінь.
-          </p>
-        </section>
+        <div class="container">
+            <section id="home">
+                <h1 data-translate="mainTitle">Оцифрування відео</h1>
+                <p data-translate="mainSubtitle">Збережіть ваші спогади у цифровому форматі</p>
+                <p data-translate="mainDescription">
+                    Ласкаво просимо до нашого сервісу оцифрування відео. Ми допоможемо
+                    вам зберегти ваші дорогоцінні моменти у високій якості для майбутніх
+                    поколінь.
+                </p>
+            </section>
 
-        <section id="services">
-          <h2>Наші послуги</h2>
-          <ul>
-            <li>Оцифрування відеокасет</li>
-            <li>Оцифрування CD та DVD дисків</li>
-            <li>Запис на флеш-накопичувачі</li>
-          </ul>
-          <p>
-            Ми використовуємо найсучасніше обладнання для забезпечення найвищої
-            якості оцифрування. Наша команда експертів гарантує, що кожен кадр
-            вашого відео буде збережений з максимальною точністю.
-          </p>
-        </section>
+            <section id="services">
+                <h2 data-translate="servicesTitle">Послуги</h2>
+                <p data-translate="servicesDescription">
+                    Ми пропонуємо широкий спектр послуг з оцифрування відео. Наші експерти використовують найсучасніше обладнання для забезпечення найвищої якості.
+                </p>
+                <!-- Добавьте здесь больше информации о ваших услугах -->
+            </section>
 
-        <section id="about">
-          <h2>Про нас</h2>
-          <p>
-            Ми спеціалізуємося на якісному оцифруванні відео з використанням
-            сучасного обладнання.
-          </p>
-          <p>
-            Наша компанія працює на ринку вже понад 10 років, і за цей час ми
-            допомогли тисячам клієнтів зберегти їхні спогади. Ми пишаємося нашою
-            репутацією та постійно вдосконалюємо наші послуги.
-          </p>
-        </section>
+            <section id="about">
+                <h2 data-translate="aboutTitle">Про нас</h2>
+                <p data-translate="aboutDescription">
+                    Наша команда складається з досвідчених фахівців, які пристрасно ставляться до збереження ваших спогадів. Ми працюємо в цій галузі вже багато років і постійно вдосконалюємо наші методи.
+                </p>
+                <!-- Добавьте здесь больше информации о вашей компании -->
+            </section>
 
-        <section id="contact">
-          <h2>Зв'яжіться з нами</h2>
-          <form
-            id="contactForm"
-            action="https://formsubmit.co/d3049999@gmail.com"
-            method="POST"
-          >
-            <input type="text" name="name" placeholder="Ваше ім'я" required />
-            <input type="email" name="email" placeholder="Ваш email" required />
-            <textarea
-              id="messageText"
-              name="message"
-              placeholder="Ваше повідомлення"
-              required
-            ></textarea>
-            <div id="messageError" class="error-message"></div>
-            <button type="submit">Надіслати</button>
-          </form>
-          <p>
-            Ми завжди раді відповісти на ваші запитання та допомогти вам
-            зберегти ваші спогади. Не соромтеся зв'язатися з нами в будь-який
-            час!
-          </p>
-        </section>
-      </div>
+            <section id="contact">
+                <h2 data-translate="contactTitle">Зв'яжіться з нами</h2>
+                <form id="contactForm" action="https://formsubmit.co/d3049999@gmail.com" method="POST">
+                    <input type="text" name="name" data-translate="namePlaceholder" placeholder="Ваше ім'я" required>
+                    <input type="email" name="email" data-translate="emailPlaceholder" placeholder="Ваш email" required>
+                    <textarea id="messageText" name="message" data-translate="messagePlaceholder" placeholder="Ваше повідомлення" required></textarea>
+                    <div id="messageError" class="error-message"></div>
+                    <button type="submit" data-translate="submitButton">Надіслати</button>
+                </form>
+                <p data-translate="contactDescription">
+                    Ми завжди раді відповісти на ваші запитання та допомогти вам
+                    зберегти ваші спогади. Не соромтеся зв'язатися з нами в будь-який
+                    час!
+                </p>
+            </section>
+        </div>
     </main>
 
     <footer>
-      <p>&copy; 2024 Оцифрування відео. Усі права захищені.</p>
+        <p data-translate="footerText">&copy; 2024 Оцифрування відео. Усі права захищені.</p>
     </footer>
 
     <script src="js/main.js"></script>
-
-  </body>
+</body>
 </html>

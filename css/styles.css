@@ -9,13 +9,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-        /* высота всего viewport */
 }
+
 .content {
     flex: 1;
-    /* занимает все доступное пространство */
 }
-/* Плавная прокрутка для всей страницы */
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -39,6 +38,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
+
+/* Фоновое изображение */
 body::before {
     content: "";
     position: fixed;
@@ -53,6 +54,7 @@ body::before {
     background-repeat: no-repeat;
 }
 
+/* Полупрозрачный белый оверлей */
 body::after {
     content: "";
     position: fixed;
@@ -62,8 +64,8 @@ body::after {
     height: 100%;
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.5);
-    /* Белый цвет с 50% прозрачности */
 }
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -76,51 +78,92 @@ body::after {
 .header {
     width: 100%;
     background-color: rgba(248, 248, 248, 0.9);
-    box-shadow: 0 2px 5px rgba(220, 10, 10, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-.header .container {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
 }
 
-header nav ul {
-    list-style: none;
+.logo {
+    max-height: 60px;
+    width: auto;
+}
+
+.header-content nav {
+    margin-left: auto;
+}
+
+.header-content nav ul {
+    display: flex;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
 }
 
-header nav li {
-    margin-left: 20px;
+.header-content nav ul li {
+    margin-left: 30px;
 }
 
-header nav a {
-    color: #333;
+.header-content nav ul li a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    color: #333;
     font-weight: 500;
+    font-size: 16px;
     transition: all 0.3s ease;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-header nav a:hover {
+.header-content nav ul li a:hover {
     color: #0779e4;
     transform: scale(1.1);
     background-color: rgba(7, 121, 228, 0.1);
+    box-shadow: 0 0 10px rgba(7, 121, 228, 0.3);
 }
 
-.logo {
-    max-height: 60px;
-    width: auto;
+/* Стили для переключателя языков */
+.language-select-container {
+    position: relative;
+    margin-left: 20px;
+}
+
+.language-select {
+    appearance: none;
+    background-color: #f8f9fa;
+    border: 2px solid #0779e4;
+    border-radius: 20px;
+    color: #0779e4;
+    font-weight: bold;
+    padding: 5px 25px 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-select:hover {
+    background-color: #0779e4;
+    color: #ffffff;
+}
+
+.language-select-container::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #0779e4;
+}
+
+.language-select-container:hover::after {
+    color: #ffffff;
 }
 
 /* Стилі для main */
@@ -134,7 +177,6 @@ section {
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,21 +256,28 @@ footer {
 
 /* Адаптивність */
 @media (max-width: 768px) {
-    .header .container {
+    .header-content {
         flex-direction: column;
     }
 
-    header nav {
+    .header-content nav {
         margin-top: 20px;
+        margin-left: 0;
     }
 
-    header nav ul {
+    .header-content nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    header nav li {
+    .header-content nav ul li {
         margin: 10px 0;
+    }
+
+    .language-select-container {
+        margin-left: 0;
+        margin-top: 10px;
+        align-self: center;
     }
 }
 
